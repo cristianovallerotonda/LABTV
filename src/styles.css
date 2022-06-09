@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  font-family: cristiano, Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: cristiano;
+  src: url(assets/font/OpenSans-Regular.woff2);
+  src: url(assets/font/OpenSans-Regular.woff);
+  src: url(assets/font/OpenSans-Regular.ttf);
+}
+
+body {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 8px 16px;
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  body h2 {
+    text-align: center;
+  }
+  
+  a {
+    color: #333;
+  }
+  
+  p,
+  h3 {
+    margin: 0;
+  }
+  
+  ul {
+    list-style: none;
+  }
