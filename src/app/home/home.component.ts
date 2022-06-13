@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApifilmService } from '../services/apifilm.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apifilmService: ApifilmService) {}
 
   ngOnInit(): void {
+    this.getApiFilm();
+  }
+
+  api: any = {};
+
+  getApiFilm() {
+    this.apifilmService.getApiFilm().subscribe(
+      (data: any) => {
+        console.log(data);
+        this.api = data;
+      },
+      (err: any) => {
+        console.log(err);
+      }
+    );
   }
 
 }

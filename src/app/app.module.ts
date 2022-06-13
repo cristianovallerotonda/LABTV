@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactComponent } from './contact/contact.component';
 import { SearchComponent } from './search/search.component';
+import { FilmDetailComponent } from './film-detail/film-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,13 @@ import { SearchComponent } from './search/search.component';
     LoginComponent,
     NotFoundComponent,
     ContactComponent,
-    SearchComponent
+    SearchComponent,
+    FilmDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
