@@ -17,7 +17,7 @@
       <td>{{ film.title }}</td>
       <td>{{ film.year }}</td>
       <td>
-        <a [routerLink]="['/film']">
+        <a [routerLink]="['/film', film.id ]">
           <img src="{{ film.image }}" class="rounded mx-auto d-block" />
         </a>
       </td>

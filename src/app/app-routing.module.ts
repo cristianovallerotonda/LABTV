@@ -11,7 +11,7 @@ import { FilmDetailComponent } from './film-detail/film-detail.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'film', component: FilmDetailComponent },
+  { path: 'film/:id', component: FilmDetailComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'contact', component: ContactComponent },
