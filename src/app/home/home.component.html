@@ -17,16 +17,10 @@
       <td>{{ film.title }}</td>
       <td>{{ film.year }}</td>
       <td>
-        <a [routerLink]="['/film']">
+        <a [routerLink]="['/film', film.id ]">
           <img src="{{ film.image }}" class="rounded mx-auto d-block" />
         </a>
       </td>
-
-      <!-- <td>
-                <a [routerLink] = "['/regione', film.regione]">
-                <i class="fa fa-eye" aria-hidden="true"></i>
-                </a>   
-            </td>-->
     </tr>
   </tbody>
 </table>

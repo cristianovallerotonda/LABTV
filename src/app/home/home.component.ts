@@ -4,10 +4,9 @@ import { ApifilmService } from '../services/apifilm.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-
   constructor(private apifilmService: ApifilmService) {}
 
   ngOnInit(): void {
@@ -19,7 +18,6 @@ export class HomeComponent implements OnInit {
   getApiFilm() {
     this.apifilmService.getApiFilm().subscribe(
       (data: any) => {
-        console.log(data);
         this.api = data;
       },
       (err: any) => {
@@ -27,5 +25,4 @@ export class HomeComponent implements OnInit {
       }
     );
   }
-
 }
