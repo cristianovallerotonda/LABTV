@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApifilmService } from '../services/apifilm.service';
+
 
 @Component({
   selector: 'app-film-detail',
