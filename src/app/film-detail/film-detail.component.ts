@@ -20,17 +20,17 @@ export class FilmDetailComponent implements OnInit {
     this.getFilmDetail(this.myIdFilm);
   }
 
-  arrFilmDetails: Array<any> = [];
+  filmDetails: any = {};
 
   getFilmDetail(myIdFilm: string) {
     this.apifilmService.getFilmDetail(myIdFilm).subscribe(
       (data) => {
-        this.arrFilmDetails = data;
+        console.log(data);
+        this.filmDetails = data;
       },
       (err: any) => {
         console.log(err);
       }
     );
   }
-
 }
