@@ -1,1 +1,39 @@
-<p>contact works!</p>
+<div class="userFormContainer" id="contatti">
+  <h2>Richiedi informazioni</h2>
+  <form class="userForm" action="" name="modulo" method="post">
+    <label for="nome">Nome</label>
+    <input class="userForm__textField" type="text" id="nome" />
+    <span class="userForm__error">Nome obbligatorio</span>
+
+    <label for="cognome">Cognome</label>
+    <input class="userForm__textField" type="text" id="cognome" />
+    <span class="userForm__error">Cognome obbligatorio</span>
+
+    <label for="email">Email</label>
+    <input class="userForm__textField" type="text" id="email" />
+    <span class="userForm__error">Inserire una email valida</span>
+
+    <label for="telefono">Telefono</label>
+    <input class="userForm__textField" type="text" id="telefono" />
+    <span class="userForm__error">Inserire un telefono valido</span>
+
+    <label for="txtMessaggio">Richiesta</label>
+    <textarea
+      class="userForm__textField"
+      name="txtMessaggio"
+      id="txtMessaggio"
+      cols="47"
+      rows="10"
+    ></textarea>
+
+    <input type="checkbox" id="privacy" />
+    <label for="privacy"
+      >Ho letto e accettato i termini e le condizioni d'uso del sito e la policy
+      sulla privacy</label
+    >
+    <span class="userForm__error" id="userForm__errorPrivacy"
+      >Accettare l'informativa sulla Privacy</span
+    >
+    <button class="userForm__button">RICHIEDI INFORMAZIONI</button>
+  </form>
+</div>
