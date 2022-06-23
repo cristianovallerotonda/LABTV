@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
     this.apifilmService.getApiFilm().subscribe(
       (data: any) => {
         this.api = data;
+        console.log(data);
       },
       (err: any) => {
         console.log(err);
