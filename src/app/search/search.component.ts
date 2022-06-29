@@ -13,17 +13,14 @@ export class SearchComponent implements OnInit {
 
   filteredFilms: any = {};
 
-  onInputClick(inputValue: string) {
+  onInputSearch(inputValue: string) {
     if (inputValue) {
       this.getFilmSearch(inputValue);
-    }else{
-      console.log("inserisci qualcosa")
     }
   }
 
   getFilmSearch(value: string) {
     this.apifilmService.getFilmSearch(value).subscribe((data) => {
-      console.log(data);
       this.filteredFilms = data;
     });
   }

@@ -8,10 +8,10 @@ import { Observable } from 'rxjs';
 export class ApifilmService {
   constructor(private http: HttpClient) {}
 
-  wsApiFilm = 'https://imdb-api.com/it/API/MostPopularMovies/k_pfx1xif6';
-  wsFilmDetail = 'https://imdb-api.com/it/API/Title/k_pfx1xif6/';
-  wsFilmTrailer = 'https://imdb-api.com/en/API/YouTubeTrailer/k_pfx1xif6/';
-  wsSearchFilm = 'https://imdb-api.com/en/API/Search/k_pfx1xif6/';
+  wsApiFilm = 'https://imdb-api.com/it/API/MostPopularMovies/k_0a9so352';
+  wsFilmDetail = 'https://imdb-api.com/it/API/Title/k_0a9so352/';
+  wsFilmTrailer = 'https://imdb-api.com/en/API/YouTubeTrailer/k_0a9so352/';
+  wsSearchFilm = 'https://imdb-api.com/en/API/Search/k_0a9so352/';
 
   getApiFilm(): Observable<any> {
     return this.http.get(this.wsApiFilm);
