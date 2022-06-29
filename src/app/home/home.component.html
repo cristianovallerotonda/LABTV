@@ -1,26 +1,19 @@
-<h1 class="display-1">Most Popular Movies</h1>
-<table
-  class="table-responsive{-sm|-md|-lg|-xl} table table-hover table-striped table-hover table-bordered"
->
-  <thead class="table-dark">
-    <tr>
-      <th>ID</th>
-      <th>Titolo</th>
-      <th>Anno</th>
-      <th>Copertina</th>
-    </tr>
-  </thead>
+  <div class="container">
+  <div *ngFor="let film of api.items" class="card">
+    <div class="card__media">
+      <a [routerLink]="['/film', film.id ]"> <img 
+        src="{{ film.image }}"
+        loading="lazy"
+        alt="Card image"
+      /></a>
+      <div class="card__date">
+        <span class="date__day">{{ film.year }}</span>
+      </div>
+      <span class="card__id">{{ film.id }}</span>
+    </div>
 
-  <tbody>
-    <tr *ngFor="let film of api.items">
-      <td>{{ film.id }}</td>
-      <td>{{ film.title }}</td>
-      <td>{{ film.year }}</td>
-      <td>
-        <a [routerLink]="['/film', film.id ]">
-          <img src="{{ film.image }}" class="rounded mx-auto d-block" />
-        </a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+    <div class="card__content">
+       <h2 class="card__title">{{ film.title }}</h2>
+     </div>
+  </div> 
+</div>
