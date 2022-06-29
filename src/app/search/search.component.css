@@ -9,7 +9,7 @@
 }
 
 .search input {
-  width: 90%;
+  width: 100%;
   border: 1px solid #c1c1c1;
   border-right: none;
   outline: none;
@@ -17,15 +17,18 @@
 }
 
 .search button {
-  padding: 20px;
+  width: 80px;
+  font-size: 20px;
   border: 1px solid #c1c1c1;
+  background-color: #e74c3c;
+  color: #fff;
   border-left: none;
   cursor: pointer;
 }
 
 /* Result */
 
-.container2 {
+.resultsList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -100,7 +103,5 @@
 
 .card__title {
   text-align: center;
-  color: initial;
-  margin: 0 0 10px;
   font-size: 20px;
 }
