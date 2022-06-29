@@ -5,14 +5,14 @@
     type="text"
     (keyup.enter)="onInputSearch(yourInput.value)"
   />
-  <button (click)="onInputSearch(yourInput.value)" id="button_ricerca" class="">
+  <button (click)="onInputSearch(yourInput.value)" id="button_ricerca">
     <i class="fa fa-search"></i>
   </button>
 </div>
 
 <!-- Result -->
 
-<div class="container2">
+<div class="resultsList">
   <div *ngFor="let film of filteredFilms.results" class="card">
     <div class="card__media">
       <a [routerLink]="['/film', film.id]">

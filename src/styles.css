@@ -140,10 +140,7 @@ table {
 /* my css */
 
 body {
-  max-width: 1200px;
-  padding: 8px 16px;
-  background: rgba(0, 0, 0, 0.05);
-  margin: 0 auto;
+  background: #dedede;
 }
 
 a {
@@ -152,9 +149,9 @@ a {
 
 p {
   margin: 8px 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
   max-width: 100%;
 }
-
