@@ -1,10 +1,7 @@
 <div class="detail" *ngIf="filmDetails">
   <div class="detail__card">
     <div class="detail__photo">
-      <img
-      src="{{ filmDetails.image }}"
-        alt="filmPoster"
-      />
+      <img src="{{ filmDetails.image }}" alt="filmPoster" />
     </div>
 
     <div class="detail__content">
@@ -37,84 +34,20 @@
       <dt>Genere</dt>
       <dd>{{ filmDetails.genres }}</dd>
       <dt>Cast</dt>
-      <dd><ng-container
-        *ngFor="let actor of filmDetails.actorList; let last = last"
-      >
-        {{ actor.name }}<ng-container *ngIf="!last">,</ng-container>
-      </ng-container></dd>
-      <dt>Film correlati</dt>
-      <dd> <ng-container
-        *ngFor="let similar of filmDetails.similars; let last = last"
-      >
-        {{ similar.title }}<ng-container *ngIf="!last">,</ng-container>
-      </ng-container></dd>
-    </dl>
-  </div>
-</div>
-
-<!-- <div class="container">
-  <div class="detail" *ngIf="filmDetails">
-    <div class="detail__title">
-      <h3>{{ filmDetails.fullTitle }}</h3>
-      <h4>ID Film: {{ filmDetails.id }}</h4>
-    </div>
-    <div class="detail__detail">
-      <div class="detail__photo">
-        <img src="{{ filmDetails.image }}" alt="filmPoster" />
-      </div>
-      <div class="detail__plot">
-        <h4>Trama</h4>
-        <p>
-          {{ filmDetails.plotLocal }}
-        </p>
-
-        <button
-          _ngcontent-wee-c22=""
-          data-toggle="tooltip"
-          title=""
-          data-original-title="Add to cart"
-          class="btn btn-dark btn-rounded mr-1"
-        >
-          <i _ngcontent-wee-c22="" class="fa fa-shopping-cart"></i>
-        </button>
-        <div id="frame" *ngIf="filmTrailer">
-          <iframe
-            [src]="transform(idUrl)"
-            width="800"
-            height="500"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="detail__info">
-      <h3>Informazioni sul film</h3>
-      <h4>Regista</h4>
-      <p>
-        {{ filmDetails.directors }}
-      </p>
-      <h4>Cast</h4>
-      <p>
+      <dd>
         <ng-container
           *ngFor="let actor of filmDetails.actorList; let last = last"
         >
           {{ actor.name }}<ng-container *ngIf="!last">,</ng-container>
         </ng-container>
-      </p>
-      <h4>Genere</h4>
-      <p>
-        {{ filmDetails.genres }}
-      </p>
-      <h4>Film correlati</h4>
-      <p>
-        <ng-container
-          *ngFor="let similar of filmDetails.similars; let last = last"
-        >
-          {{ similar.title }}<ng-container *ngIf="!last">,</ng-container>
-        </ng-container>
-      </p>
-    </div>
+      </dd>
+      <dt>Film correlati</dt>
+      <dd>
+        <ng-container *ngFor="let similar of filmDetails.similars; let last = last" ;>
+          <a target="_blank" [routerLink]="['/film', similar.id]"
+            >{{ similar.title }}</a><ng-container *ngIf="!last">, </ng-container>
+          </ng-container>
+      </dd>
+    </dl>
   </div>
-</div> -->
+</div>

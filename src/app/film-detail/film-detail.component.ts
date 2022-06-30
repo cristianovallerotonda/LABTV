@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { ApifilmService } from '../services/apifilm.service';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer} from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-film-detail',
@@ -14,7 +14,7 @@ export class FilmDetailComponent implements OnInit {
   constructor(
     private apifilmService: ApifilmService,
     private route: ActivatedRoute,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
   ) {}
 
   idUrl: string = '';

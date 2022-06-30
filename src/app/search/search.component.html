@@ -13,5 +13,5 @@
 <!-- Result -->
 
 <div class="resultsList">
-  <app-card *ngFor="let film of filteredFilms.results" [props]="film"></app-card>
+  <app-card [ngClass]="'resultsList__item'" *ngFor="let film of filteredFilms.results" [props]="film"></app-card>
 </div>

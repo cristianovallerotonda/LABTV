@@ -8,10 +8,10 @@ import { Observable } from 'rxjs';
 export class ApifilmService {
   constructor(private http: HttpClient) {}
 
-  wsApiFilm = 'https://imdb-api.com/it/API/MostPopularMovies/k_0a9so352';
-  wsFilmDetail = 'https://imdb-api.com/it/API/Title/k_0a9so352/';
-  wsFilmTrailer = 'https://imdb-api.com/en/API/YouTubeTrailer/k_0a9so352/';
-  wsSearchFilm = 'https://imdb-api.com/en/API/Search/k_0a9so352/';
+  wsApiFilm = 'https://imdb-api.com/it/API/MostPopularMovies/k_5kqh9fye';
+  wsFilmDetail = 'https://imdb-api.com/it/API/Title/k_5kqh9fye/';
+  wsFilmTrailer = 'https://imdb-api.com/en/API/YouTubeTrailer/k_5kqh9fye/';
+  wsSearchFilm = 'https://imdb-api.com/en/API/Search/k_5kqh9fye/';
 
   getApiFilm(): Observable<any> {
     return this.http.get(this.wsApiFilm);
@@ -30,8 +30,7 @@ export class ApifilmService {
   }
 }
 
-  
-
 //https://imdb-api.com/en/API/MostPopularMovies/k_mtl1ukx1
 // k_pfx1xif6
 // k_0a9so352
+// k_5kqh9fye
