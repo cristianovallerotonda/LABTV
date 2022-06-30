@@ -13,6 +13,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactComponent } from './contact/contact.component';
 import { SearchComponent } from './search/search.component';
 import { FilmDetailComponent } from './film-detail/film-detail.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FilmDetailComponent } from './film-detail/film-detail.component';
     NotFoundComponent,
     ContactComponent,
     SearchComponent,
-    FilmDetailComponent
+    FilmDetailComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

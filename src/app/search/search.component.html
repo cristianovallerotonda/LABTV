@@ -13,16 +13,5 @@
 <!-- Result -->
 
 <div class="resultsList">
-  <div *ngFor="let film of filteredFilms.results" class="card">
-    <div class="card__media">
-      <a [routerLink]="['/film', film.id]">
-        <img src="{{ film.image }}" alt="Card image"
-      /></a>
-      <span class="card__category">{{ film.id }}</span>
-    </div>
-
-    <div class="card__content">
-      <h2 class="card__title">{{ film.title }}</h2>
-    </div>
-  </div>
+  <app-card *ngFor="let film of filteredFilms.results" [props]="film"></app-card>
 </div>

@@ -1,19 +1,4 @@
-  <div class="resultsList">
-  <div *ngFor="let film of api.items" class="card">
-    <div class="card__media">
-      <a [routerLink]="['/film', film.id ]"> <img 
-        src="{{ film.image }}"
-        loading="lazy"
-        alt="Card image"
-      /></a>
-      <div class="card__date">
-        <span class="date__day">{{ film.year }}</span>
-      </div>
-      <span class="card__id">{{ film.id }}</span>
-    </div>
-
-    <div class="card__content">
-       <h2 class="card__title">{{ film.title }}</h2>
-     </div>
-  </div> 
+<div class="resultsList">
+ <app-card *ngFor="let film of api.items" [props]="film"></app-card>
 </div>
+ 
