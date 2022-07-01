@@ -14,7 +14,7 @@ export class CardComponent {
   }
 
   @Input()
-  props!: MovieAbstract;
+  card!: MovieAbstract;
 
   
 }
