@@ -1,11 +1,15 @@
 .menu {
   padding: 0;
-  margin: 24px 0;
-  margin-right: 1px;
+  margin-bottom: 24px;
+  background-color: #323030;
+}
+
+.menu__container {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background-color: #323030;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .menu__item {
@@ -29,14 +33,12 @@
   color: rgba(255, 255, 255, 0.822);
 }
 
-
 @media screen and (min-width: 750px) {
-  .menu {
+  .menu__container {
     flex-direction: row;
   }
 
   .menu__item {
     margin-bottom: 0px;
   }
-
 }
