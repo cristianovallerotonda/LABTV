@@ -1,1 +1,28 @@
-<p>register works!</p>
+<div class="userFormContainer" id="registrazione">
+  <h2>Registrati</h2>
+  <form class="userForm" action="javascript:void(0)" method="post">
+    <label for="email">Email</label>
+    <input class="userForm__textField" type="text" id="email" />
+    <span class="userForm__error">Email obbligatoria</span>
+
+    <label for="pass">Password</label>
+    <input class="userForm__textField" type="password" id="pass" />
+    <span class="userForm__error">Password obbligatoria</span>
+
+    <label for="pass">Ripeti Password</label>
+    <input class="userForm__textField" type="password" id="conferma" />
+    <span class="userForm__error"
+      >La password confermata è diversa da quella scelta</span
+    >
+
+    <input type="checkbox" id="privacy" />
+    <label for="privacy"
+      >Ho letto e accettato i termini e le condizioni d'uso del sito e la policy
+      sulla privacy</label
+    >
+    <span class="userForm__error" id="userForm__errorPrivacy"
+      >Accettare l'informativa sulla Privacy</span
+    >
+    <button class="userForm__button">Registrati</button>
+  </form>
+</div>
