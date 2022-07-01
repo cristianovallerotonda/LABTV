@@ -1,15 +1,15 @@
 <div class="card">
   <div class="card__media">
-    <a [routerLink]="['/film', props.id]">
-      <img src="{{ props.image }}" loading="lazy" alt="Card image"
+    <a [routerLink]="['/film', card.id]">
+      <img src="{{ card.image }}" loading="lazy" alt="Card image"
     /></a>
-    <div *ngIf="props.year" class="card__date">
-      <span class="date__day">{{ props.year }}</span>
+    <div *ngIf="card.year" class="card__date">
+      <span class="date__day">{{ card.year }}</span>
     </div>
-    <span class="card__id">{{ props.id }}</span>
+    <span class="card__id">{{ card.id }}</span>
   </div>
 
   <div class="card__content">
-    <h2 class="card__title">{{ props.title }}</h2>
+    <h2 class="card__title">{{ card.title }}</h2>
   </div>
 </div>

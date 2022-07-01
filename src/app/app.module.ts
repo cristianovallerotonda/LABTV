@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SearchComponent } from './search/search.component';
 import { FilmDetailComponent } from './film-detail/film-detail.component';
 import { CardComponent } from './card/card.component';
+import { ResultsListComponent } from './results-list/results-list.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CardComponent } from './card/card.component';
     ContactComponent,
     SearchComponent,
     FilmDetailComponent,
-    CardComponent
+    CardComponent,
+    ResultsListComponent
   ],
   imports: [
     BrowserModule,

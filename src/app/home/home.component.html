@@ -1,4 +1,1 @@
-<div class="resultsList">
- <app-card [ngClass]="'resultsList__item'" *ngFor="let film of api.items" [props]="film"></app-card>
-</div>
- 
+<app-results-list [cards]="api.items"></app-results-list>
