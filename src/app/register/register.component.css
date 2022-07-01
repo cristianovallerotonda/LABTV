@@ -1,0 +1,46 @@
+.userFormContainer {
+    max-width: 400px;
+    margin: 48px auto;
+    padding: 24px;
+  }
+  
+  .userFormContainer h2 {
+    margin: 0 0 8px;
+    text-align: center;
+  }
+  
+  /* input,button,label  */
+  
+  .userForm__textField {
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px;
+    font-size: 16px;
+    border: solid 2px #aaa;
+  }
+  
+  .userForm__error {
+    display: none;
+    margin-bottom: 8px;
+    color: red;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  
+  #userForm__errorPrivacy {
+    margin: 8px 0 0;
+  }
+  
+  .userForm__button {
+    width: 100%;
+    margin: 16px auto;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.55);
+    cursor: pointer;
+  }
+  
+  .userForm__button:hover {
+    color: rgba(255, 255, 255, 0.822);
+  }
+  
