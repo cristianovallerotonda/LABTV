@@ -17,6 +17,7 @@ import { CardComponent } from './card/card.component';
 import { ResultsListComponent } from './results-list/results-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     FilmDetailComponent,
     CardComponent,
     ResultsListComponent,
-    DashboardComponent
+    DashboardComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

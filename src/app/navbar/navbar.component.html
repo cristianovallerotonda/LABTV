@@ -6,17 +6,21 @@
       >
     </div>
     <div class="menu__item">
-      <a class="nav-link" [routerLink]="['/login']"
-        ><i class="fa-solid fa-arrow-right-to-bracket"></i> Login/Registrazione</a
-      >
-    </div>
-    <div class="menu__item">
       <a class="nav-link" [routerLink]="['/contact']"
         ><i class="fa-solid fa-at"></i> Contatti</a
       >
     </div>
     <div class="menu__item">
-      <a class="nav-link" [routerLink]="['/search']"><i class="fa-solid fa-magnifying-glass"></i> Ricerca</a>
+      <a class="nav-link" [routerLink]="['/search']"
+        ><i class="fa-solid fa-magnifying-glass"></i> Ricerca</a
+      >
+    </div>
+    <div class="menu__item">
+      <a class="nav-link" (click)="open()"
+        ><i class="fa-solid fa-arrow-right-to-bracket"></i>
+        Login/Registrazione</a
+      >
     </div>
   </div>
+  <app-modal></app-modal>
 </nav>

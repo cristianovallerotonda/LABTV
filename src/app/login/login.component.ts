@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LoginService } from '../services/login.service';
 import { ValidateService } from '../services/validate.service';
+import { ModalService } from '../services/modal.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,8 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private validateService: ValidateService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private modalService: ModalService
   ) {}
 
   accessToken: string = '';
@@ -78,6 +80,7 @@ export class LoginComponent implements OnInit {
                 this.my_profile = data.data;
                 //navigo automaticamente verso un'altra rotta (redirect)
                 this.router.navigate(['/dashboard', this.paramToken]);
+                this.modalService.close();
               });
           });
         },
