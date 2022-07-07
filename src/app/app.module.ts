@@ -15,6 +15,8 @@ import { SearchComponent } from './search/search.component';
 import { FilmDetailComponent } from './film-detail/film-detail.component';
 import { CardComponent } from './card/card.component';
 import { ResultsListComponent } from './results-list/results-list.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,12 +32,14 @@ import { ResultsListComponent } from './results-list/results-list.component';
     SearchComponent,
     FilmDetailComponent,
     CardComponent,
-    ResultsListComponent
+    ResultsListComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

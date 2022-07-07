@@ -1,0 +1,18 @@
+<h3>Benvenuto nella Dashboard</h3>
+<h5><a (click)="viewUser()">Profilo Utente</a></h5>
+<h5><a (click)="viewFilms()">I miei film</a></h5>
+<h5><a (click)="logout()">Logout</a></h5>
+
+<div *ngIf="isProfileVisible">
+  <h3>Profilo utente di {{ objUser.nome }} {{ objUser.cognome }}</h3>
+
+  <ul>
+    <li>Username: {{ objUser.username }}</li>
+    <li>Email: {{ objUser.email }}</li>
+    <li>Indirizzo: {{ objUser.indirizzo }}</li>
+    <li>CAP: {{ objUser.cap }}</li>
+    <li>Città: {{ objUser.citta }}</li>
+    <li>Cellulare: {{ objUser.cellulare }}</li>
+    <li>Ruolo: {{ objUser.role }}</li>
+  </ul>
+</div>

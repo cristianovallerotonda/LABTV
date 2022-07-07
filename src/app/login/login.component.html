@@ -1,19 +1,38 @@
 <div class="userFormContainer" id="login">
   <h2>Entra nell'area riservata</h2>
-  <form class="userForm" action="javascript:void(0)" method="post">
-    <label for="email">Email</label>
-    <input class="userForm__textField" type="text" id="email" />
+  <form
+    class="userForm"
+    method="POST"
+    (submit)="onSubmitForm($event)"
+  >
+    <label for="email">Username</label>
+    <input
+      class="userForm__textField"
+      [(ngModel)]="username"
+      name="username"
+      type="text"
+      id="email"
+      placeholder="Inserisci Username"
+    />
     <span class="userForm__error">Email obbligatoria</span>
 
     <label for="pass">Password</label>
-    <input class="userForm__textField" type="password" id="pass" />
+    <input
+      class="userForm__textField"
+      [(ngModel)]="password"
+      name="password"
+      type="password"
+      id="pass"
+      placeholder="Password"
+    />
     <span class="userForm__error">Password obbligatoria</span>
     <a href="...">Non ricordi la password?</a>
 
-    <button class="userForm__button">Entra</button>
+    <button type="submit" class="userForm__button">Entra</button>
 
     <a [routerLink]="['/register']"
       >Non hai ancora un Account ? Clicca qui ORA
     </a>
   </form>
+  <div id="message" [innerHTML]="myMessage" *ngIf="myMessage"></div>
 </div>
