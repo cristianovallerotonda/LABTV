@@ -11,7 +11,11 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  open() {
-    this.modalService.open();
+    openModal(id: string) {
+    this.modalService.open(id);
   }
+
+  closeModal(id: string) {
+    this.modalService.close(id);
+}
 }

@@ -80,7 +80,6 @@ export class LoginComponent implements OnInit {
                 this.my_profile = data.data;
                 //navigo automaticamente verso un'altra rotta (redirect)
                 this.router.navigate(['/dashboard', this.paramToken]);
-                this.modalService.close();
               });
           });
         },

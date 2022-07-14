@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../services/login.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ModalService } from '../services/modal.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,8 @@ export class DashboardComponent implements OnInit {
   constructor(
     private loginService: LoginService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private modalService: ModalService
   ) {}
 
   isUserLogged: boolean = false;
@@ -31,7 +33,7 @@ export class DashboardComponent implements OnInit {
       // this.router.navigate(['/home']); redirect alla pagina home
       localStorage.removeItem('accessToken');
     }
-    console.log(this.isUserLogged);
+    console.log('sono loggato?', this.isUserLogged);
   }
 
   objAccessToken: any = { accessToken: localStorage.getItem('accessToken') };
@@ -58,5 +60,13 @@ export class DashboardComponent implements OnInit {
       localStorage.removeItem('accessToken');
     }
     this.router.navigate(['/home']);
+  }
+
+  openModal(id: string) {
+    this.modalService.open(id);
+  }
+
+  closeModal(id: string) {
+    this.modalService.close(id);
   }
 }

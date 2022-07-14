@@ -1,9 +1,15 @@
-<h3>Benvenuto nella Dashboard</h3>
-<h5><a (click)="viewUser()">Profilo Utente</a></h5>
-<h5><a (click)="viewFilms()">I miei film</a></h5>
-<h5><a (click)="logout()">Logout</a></h5>
 
-<div *ngIf="isProfileVisible">
+<!-- <h5><a (click)="viewUser()">Profilo Utente</a></h5>
+<h5><a (click)="viewFilms()">I miei film</a></h5>
+<h5><a (click)="logout()">Logout</a></h5> -->
+<div *ngIf="isUserLogged; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock><a (click)="logout()">Logout</a></ng-template>
+<ng-template #elseBlock>
+  <button (click)="openModal('custom-modal-1')">LOGIN</button>
+  <app-modal id="custom-modal-1"> <app-login></app-login></app-modal>
+</ng-template>
+
+<!-- <div *ngIf="isProfileVisible">
   <h3>Profilo utente di {{ objUser.nome }} {{ objUser.cognome }}</h3>
 
   <ul>
@@ -15,4 +21,4 @@
     <li>Cellulare: {{ objUser.cellulare }}</li>
     <li>Ruolo: {{ objUser.role }}</li>
   </ul>
-</div>
+</div> -->
